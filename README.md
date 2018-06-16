@@ -13,7 +13,7 @@ $ composer create-project msouza/msmvc
 Pra instalar é muito simples, basta rodar este comando no seu projeto:
 
 ``` bash
-$ composer require msouza/msmvc--console
+$ composer require msouza/msmvc-console
 ```
 
 
