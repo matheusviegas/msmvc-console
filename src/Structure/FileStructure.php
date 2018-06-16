@@ -29,6 +29,10 @@ class FileStructure{
 		return $this->getFile("Helper");
 	}
 
+	public function middleware(){
+		return $this->getFile("Middleware");
+	}
+
 	private function getFile($file){
 		if(is_null($this->structureFile))
 			$this->structureFile = file_get_contents(__DIR__."/Files/{$file}.php");

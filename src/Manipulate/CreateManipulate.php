@@ -87,4 +87,16 @@ class CreateManipulate extends PathStructure{
 
 		return $this->successAdded;
 	}
+
+	public function createMiddleware($name){
+		$fileContent = $this->fileStructure->middleware();
+
+		$createFile = $this->fileManipulate->createFile($name, $fileContent, $this->pathMiddleware);
+
+		if($createFile !== true){
+			return $this->errorExist;
+		}
+
+		return $this->successCreate;
+	}
 }

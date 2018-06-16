@@ -18,6 +18,7 @@ class MSMVCConsole {
 		$this->symfonyConsole->add(new Command\CreateView());
 		$this->symfonyConsole->add(new Command\CreateHelper());
 		$this->symfonyConsole->add(new Command\CreateRoute());
+		$this->symfonyConsole->add(new Command\CreateMiddleware());
 	}
 
 	public function __destruct(){
