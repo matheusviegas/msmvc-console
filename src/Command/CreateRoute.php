@@ -28,7 +28,7 @@ class CreateRoute extends Command{
 		$createManipulate = new CreateManipulate();
 		$createManipulate->successAdded = "<info>Route created with success!</info>";
 
-		return $output->writeln($createManipulate->createRoute($route, $controller));
+		return $output->writeln($createManipulate->createRoute($route, $controller, $method));
 	}
 
 }
