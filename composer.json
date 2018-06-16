@@ -1,0 +1,22 @@
+{
+    "name": "msouza/msmvc-console",
+    "description": "Create Controllers, Models, Helpers, Routes and Views from your console.",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "symfony/console": "^3.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matheus Souza",
+            "email": "matheusviegasdesouza@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "MSMVC\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
