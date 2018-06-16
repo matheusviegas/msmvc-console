@@ -36,3 +36,14 @@ https://gist.githubusercontent.com/matheusviegas/966fc59759c4127894b92d12dedfe4a
 
 
 Pronto, agora você ja pode utilizar os comandos na sua console.
+
+
+## Comandos Disponíveis
+
+``` bash
+php msmvc create:helper {NOME DO ARQUIVO} {NOME DA FUNCTION}
+php msmvc create:controller {NOME DO CONTROLLER}
+php msmvc create:model {NOME DA MODEL}
+php msmvc create:view {NOME DA VIEW] --type=html (Opcional - Se não informado, gerará o arquivo de view vazio)
+php msmvc create:route {NOME DA ROTA} {CONTROLLER@METODO} {METODO HTTP (Opcional - Aceita get ou post - Default: get)}
+```
