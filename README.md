@@ -46,4 +46,5 @@ php msmvc create:controller {NOME DO CONTROLLER}
 php msmvc create:model {NOME DA MODEL}
 php msmvc create:view {NOME DA VIEW] --type=html (Opcional - Se não informado, gerará o arquivo de view vazio)
 php msmvc create:route {NOME DA ROTA} {CONTROLLER@METODO} {METODO HTTP (Opcional - Aceita get ou post - Default: get)}
+php msmvc create:middleware {NOME DA MIDDLEWARE}
 ```
