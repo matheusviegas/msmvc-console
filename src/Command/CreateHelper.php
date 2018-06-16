@@ -15,16 +15,15 @@ class CreateHelper extends Command{
 		->setDescription('Create new Helper')
 		->setHelp("This command is used to create new Helper");
 
-		$this->addArgument('name', InputArgument::REQUIRED, 'The helper name');
+		$this->addArgument('name', InputArgument::REQUIRED, 'The helper file name')->
+		addArgument('function_name', InputArgument::REQUIRED, 'The function name');
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output){
-		$name = $input->getArgument('name');
-
 		$createManipulate = new CreateManipulate();
 		$createManipulate->successCreate = "<info>Helper created with success!</info>";
 
-		return $output->writeln($createManipulate->createHelper($name));
+		return $output->writeln($createManipulate->createHelper($input->getArgument('name'), $input->getArgument('function_name')));
 	}
 
 }

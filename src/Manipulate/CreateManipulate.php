@@ -59,10 +59,10 @@ class CreateManipulate extends PathStructure{
 		return $this->successCreate;
 	}
 
-	public function createHelper($name){
+	public function createHelper($name, $function_name){
 		$fileContent = $this->fileStructure->helper();
 
-		$createFile = $this->fileManipulate->createFile($name, $fileContent, $this->pathHelper);
+		$createFile = $this->fileManipulate->createFile($name, $fileContent, $this->pathHelper, true, ['FUNCTION_NAME' => $function_name]);
 
 		if($createFile !== true){
 			return $this->errorExist;

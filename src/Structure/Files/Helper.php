@@ -1,7 +1,7 @@
 <?php
 
-if(!function_exists('REPLACE_NAME_HERE')) {
-	function REPLACE_NAME_HERE(){
+if(!function_exists('FUNCTION_NAME')) {
+	function FUNCTION_NAME(){
 	
 	}
 }
