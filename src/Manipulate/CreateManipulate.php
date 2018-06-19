@@ -71,15 +71,14 @@ class CreateManipulate extends PathStructure{
 		return $this->successCreate;
 	}
 
-	public function createRoute($route, $controller, $method = 'GET'){
-
-		if(!in_array(strtoupper($method), ['GET', 'POST'])){
+	public function createRoute($route, $controller, $method, $file){
+		if(!in_array(strtoupper($method), ['GET', 'POST']) || !in_array(strtolower($file), ['api', 'web'])){
 			return $this->errorAdded;
 		}
 
-		$fileContent = "\nRoute::{$method}('{$route}', '{$controller}');";
+		$fileContent = "\n\$router->{$method}('{$route}', '{$controller}');";
 
-		$addedFile = $this->fileManipulate->addInFile($fileContent, $this->pathRoute);
+		$addedFile = $this->fileManipulate->addInFile($fileContent, $this->pathRoute . $file . '.php');
 
 		if($addedFile != true){
 			return $this->errorAdded;

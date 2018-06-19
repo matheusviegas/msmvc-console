@@ -14,20 +14,22 @@ class CreateRoute extends Command{
 		->setDescription('Create new Route')
 		->setHelp("This command is used to create new Route");
 
-		$this->addArgument('route', InputArgument::REQUIRED, 'The route url')
-		->addArgument('controller', InputArgument::REQUIRED, 'Controller to use')
-		->addArgument('method', InputArgument::OPTIONAL, 'HTTP Method accepted for this route');
+		$this->addArgument('method', InputArgument::REQUIRED, 'HTTP Method accepted for this route')
+		->addArgument('route', InputArgument::REQUIRED, 'The route url')
+		->addArgument('controller', InputArgument::REQUIRED, 'Controller@method to use')
+		->addArgument('file', InputArgument::REQUIRED, 'The routes file to add the route [api or web]');
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output){
 		$route = $input->getArgument('route');
 		$controller = $input->getArgument('controller');
 		$method = $input->getArgument('method');
+		$file = $input->getArgument('file');
 
 		$createManipulate = new CreateManipulate();
 		$createManipulate->successAdded = "<info>Route created with success!</info>";
 
-		return $output->writeln($createManipulate->createRoute($route, $controller, $method));
+		return $output->writeln($createManipulate->createRoute($route, $controller, $method, $file));
 	}
 
 }
